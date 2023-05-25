@@ -4,6 +4,7 @@ import { Profile } from './components/Profile';
 import { Messages } from './components/Messages';
 import { Settings } from './components/Settings';
 import { Shop } from './components/Shop';
+import { Advice } from './components/Advice';
 
 function App(props) {
   console.log
@@ -16,14 +17,18 @@ function App(props) {
       <NavLink className="nav-link" to="messages">Сообщения</NavLink>
       <NavLink className="nav-link" to="settings">Настройки</NavLink>
       <NavLink className="nav-link" to="shop">Магазин</NavLink>
+      <NavLink className="nav-link" to="advice">Советы</NavLink>
     </div>
   </div>
   <div className="col-md-9">
     <Routes>
-      <Route  path="/profile" element={<Profile function={props.function.key_getUser}/>}/>
-      <Route  path="/messages" element={<Messages function={props.function.key_getUsers}/>}/>
+      <Route path="/" element={<h3 className="text-red-500">Ваш личный кабинет.Пользуйтесь меню слева.</h3>} />
+      <Route  path="/profile/*" element={<Profile function={props.function.key_getUser}/>}/>
+      <Route  path="/messages/*" element={<Messages function={props.function.key_getUsers}/>}/>
       <Route  path="/settings" element={<Settings />}/>
       <Route  path="/shop" element={<Shop />}/>
+      <Route  path="/Advice" element={<Advice />}/>
+
     </Routes>
   </div>
 </div>

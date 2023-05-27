@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import rowImg from "../assets/img/sea.jpg";
 import React from "react";
 
 const TableRow = (props) => {
@@ -61,7 +61,7 @@ export class Messages extends React.Component {
 				</div>
 				<div className="row">
 					<div className="col-6">
-				
+					<img src={rowImg} alt="" />
 					</div>
 				</div>
 			</>

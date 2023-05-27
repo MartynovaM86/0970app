@@ -59,8 +59,8 @@ export function getUser(userId) {
   return user;
 }
 export async function getUsers() {
-	let response = await fetch("https://jessy.p-host.in/getUsers");
-  let users = await response.json();
+	let response = await fetch("https://royall.p-host.in/getUsers");
+    let users = await response.json();
 	console.log(users);
 	return users;
 }
